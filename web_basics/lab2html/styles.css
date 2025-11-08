@@ -1,0 +1,97 @@
+/* === БАЗОВЕ ОФОРМЛЕННЯ === */
+:root{
+  --text: #1f2937;        /* темно-сірий текст */
+  --accent: #ef6c00;      /* помаранчевий акцент */
+  --muted: #6b7280;       /* приглушений сірий */
+  --bg: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Контейнер для читабельної ширини */
+.container {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+/* Заголовки */
+.page-header, .page-footer {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 16px;
+}
+
+.page-header h1, .page-footer {
+  margin: 0 auto;
+  max-width: 900px;
+  color: var(--text);
+  font-weight: 700;
+}
+
+/* Посилання */
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+/* Фото автора */
+.author-photo {
+  margin: 0;
+  display: inline-block;
+  text-align: center;
+}
+.author-photo img {
+  display: block;
+  max-width: 100%;
+  height: auto;          /* зберігає пропорції */
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0,0,0,.08);
+}
+.author-photo figcaption {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+/* Посилання з іконкою «Додому» */
+.home-link {
+  margin-top: 20px;
+}
+.home-anchor {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border: 1px solid #ffe0b2;
+  border-radius: 10px;
+  transition: transform .1s ease, background-color .2s ease;
+}
+.home-anchor:hover {
+  background: #fff3e0;
+  transform: translateY(-1px);
+}
+.home-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Невеликий підвал */
+.page-footer {
+  border-top: 1px solid #e5e7eb;
+  border-bottom: none;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 24px;
+}
