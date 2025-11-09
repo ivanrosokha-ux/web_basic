@@ -1,0 +1,66 @@
+#main-title {
+  color: green;
+}
+
+.main-title {
+    text-transform: uppercase;
+}
+.goals li span {
+  background: yellow;
+  padding: 2px 6px;
+  border-radius: 4px;
+  display: inline-block;
+   color: #ff0000;
+  font-style: italic;
+}
+.goals li {
+  color: #ff0000;
+}
+
+
+
+ol {
+  border: 1px solid red;
+}
+a[href$=".pdf"] {
+  color: green;
+  font-style: italic;
+}
+a{
+  color: violet; text-decoration: none;
+}
+ul ul{
+  text-transform: uppercase
+}
+p a{
+    color: magenta; background-color: mistyrose;
+}
+.bold {
+  font-weight: bold;
+}
+li.bold { 
+  text-transform: uppercase; 
+}
+
+p:nth-of-type(2) {
+  text-align:right; border:2px solid blue; font-size:20px; 
+}
+
+p:has(a[href^="mailto"]) {
+  text-align:right; border:2px solid blue; font-size:20px;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+/* 13. на тег h1 встановіть колір шрифта червоний. Чому він не спрацює і що можна зробити щоб він спрацював?*/
+/*тому що в мене вже є #main-title {color: green;} (він має вищий пріорітет)
+ну а щоб зробити щоб текст був червоний нам треба або прибрати зелене правило,
+або записати нижче і специфічніше:h1#main-title { color: red; } або дописати !important */
+
+
