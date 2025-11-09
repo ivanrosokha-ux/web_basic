@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Моя перша HTML-форма</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <form
+     action="https://httpbin.org/post" method="post"
+
+    >
+      <h2>Моя перша HTML-форма</h2>
+
+      <div class="field">
+        <label for="name">Ім'я:</label>
+        <input id="name" name="name" type="text" placeholder="Ваше ім'я" />
+      </div>
+
+      <div class="field">
+        <label for="birthdate">Дата народження:</label>
+        <input id="birthdate" name="birthdate" type="date" />
+      </div>
+
+      <div class="field">
+        <label
+          >Імейл:
+          <input name="email" type="email" placeholder="name@example.com" />
+        </label>
+      </div>
+
+      <div class="field">
+        <label for="message">Повідомлення:</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          placeholder="Ваш текст..."
+        ></textarea>
+      </div>
+
+      <fieldset class="field">
+        <legend>Ваші улюблені напої?</legend>
+        <label
+          ><input type="checkbox" name="drinks[]" value="coffee" /> Кава</label
+        >
+        <label><input type="checkbox" name="drinks[]" value="tea" /> Чай</label>
+        <label
+          ><input type="checkbox" name="drinks[]" value="juice" /> Сік</label
+        >
+        <label
+          ><input type="checkbox" name="drinks[]" value="water" /> Вода</label
+        >
+      </fieldset>
+
+      <fieldset class="field">
+        <legend>Моя національність</legend>
+        <label
+          ><input type="radio" name="nationality" value="ukrainian" />
+          Українець/Українка</label
+        >
+        <label
+          ><input type="radio" name="nationality" value="czech" />
+          Чех/Чешка</label
+        >
+        <label
+          ><input type="radio" name="nationality" value="other" /> Інша</label
+        >
+      </fieldset>
+
+      <div class="actions">
+        <button type="submit">Надіслати</button>
+        <button type="reset">Очистити</button>
+      </div>
+    </form>
+
+    <picture class="demo-picture">
+      <source
+        media="(max-width: 468px)"
+        srcset="https://picsum.photos/300/500"
+      />
+      <img
+        src="https://picsum.photos/1000/400"
+        alt="Демонстраційне зображення"
+      />
+    </picture>
+  </body>
+</html>
