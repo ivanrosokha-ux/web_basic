@@ -1,0 +1,83 @@
+/* 1. Базовий шрифт для всього документа */
+html, body {
+  font-family: serif;
+  font-size: 14px;
+  line-height: 1.25;
+  color: #777;
+  margin: 0;
+  padding: 0 16px;
+}
+
+/* 2. Усі вкладені списки — курсив + жирний */
+ul ul {
+  font-style: italic;
+  font-weight: 700;
+}
+
+/* 3. Заголовки: Cormorant Infant, міжлітерний інтервал, чорний, кожне слово з великої */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Cormorant Infant", serif;
+  letter-spacing: 0.5px;
+  color: #000;
+  text-transform: capitalize;
+}
+
+/* 4. H1 = 32px */
+h1 { font-size: 32px; }
+
+/* 5. H2 = 26px */
+h2 { font-size: 26px; }
+
+/* 6. Другий абзац — подвійний міжрядковий інтервал */
+.double-line { line-height: 2; }
+
+/* 7. Стилі для поштового блоку */
+.mail-box {
+  width: 150px;                   /* фіксована ширина */
+  background: #E3FFF6;            /* фон */
+  border: 5px solid #C2E4C2;      /* рамка 5px */
+  padding: 5px 20px;              /* вертикальні 5, горизонтальні 20 */
+  box-sizing: border-box;         /* 8. щоб разом із падінгом і бордером не роздувало */ 
+}
+
+/* 8. Демонстраційна лінійка 150px вже є у методичці */
+.ruler {
+  width: 150px;
+  background-color: lime;
+  text-align: center;
+}
+
+/* 9. Ламаня слова в email, щоб текст не вилазив із блоку */
+.mail-box a {
+  word-wrap: break-word;      /* старий синонім */
+  overflow-wrap: anywhere;    /* сучасний спосіб */
+  display: block;             /* 10. починати з нового рядка */
+  text-decoration: none;
+}
+
+/* 11. Абзаци вирівняні по ширині */
+p { text-align: justify; }
+
+/* 12. Список переваг із фоном-зображенням, відступами і білим текстом */
+.our-adv {
+  list-style: disc;
+  padding-top: 30px;
+  padding-bottom: 60px;
+  color: #fff;
+  font-size: 16px;
+  background-image: url('http://picsum.photos/id/357/700/400?blur=5');
+  background-repeat: no-repeat;
+  /* 13. Фон на всю ширину зі збереженням пропорцій і центром */
+  background-size: cover;
+  background-position: center;
+  margin: 0; /* щоб не з’їдався відступами */
+}
+
+/* трошки відступів усередині списку, щоб маркери були видимі на фоні */
+.our-adv li { margin-left: 24px; }
+
+/* 14. Верхній зовнішній відступ H2 = 60px, нижній = 0 */
+h2 {
+  margin-top: 60px;
+  margin-bottom: 0;
+}
